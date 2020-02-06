@@ -1,0 +1,362 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Documentation</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">Documentation</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1> Documentation</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#node-microservice-boilerplate" id="node-microservice-boilerplate" style="color: inherit; text-decoration: none;">
+					<h1>Node Microservice Boilerplate</h1>
+				</a>
+				<p>A boilerplate to help start Node.js projects quickly and effectively. Packaged with Typescript, Docker, Kubernetes, PM2, Eslint, Prettier, VSCode config, Winston, Typedoc, Nodemon, AVA, PromClient, JWT, Editorconfig, OpenAPI/Swagger, Jaeger/Open Tracing, etc.</p>
+				<a href="#motive-behind-this-project" id="motive-behind-this-project" style="color: inherit; text-decoration: none;">
+					<h2>Motive behind this project</h2>
+				</a>
+				<p>Having worked on a lot of node.js projects, I had to repetitively do the same tasks over and over again, get a project structure, install stuff, implement standardization, containerize it, implement logging, and make sure everything is in place before I start off. This takes all the burden out and lets people focus just on the logic and nothing else.</p>
+				<p>You can find the article I wrote on this project here: <a href="https://medium.com/techahoy/building-a-boilerplate-for-microservices-part-1-166ce00f5ce9">https://medium.com/techahoy/building-a-boilerplate-for-microservices-part-1-166ce00f5ce9</a></p>
+				<a href="#basic-concepts-behind-the-architecture" id="basic-concepts-behind-the-architecture" style="color: inherit; text-decoration: none;">
+					<h2>Basic Concepts behind the architecture</h2>
+				</a>
+				<ol>
+					<li>All the code you write resides within <code>src</code> folder and gets built when you start the server in <code>dist</code> folder.</li>
+					<li>All configuration is stored against the respective environment in <code>src/config/env</code> folder and <code>.env</code> file in the root.</li>
+					<li>All your navigation routes are placed in <code>src/app/routes</code> folder. You can place as many js files as you want within.</li>
+					<li>All your logic is written in controllers placed within <code>src/app/controllers</code> folder.</li>
+					<li>If you have utility functions which you will use across controllers, put them in <code>src/app/utils</code> folder.</li>
+					<li>All the server side rendered template files are to be placed in <code>src/app/views</code> folder.</li>
+					<li>All your static files and content is to be placed in the <code>public</code> folder.</li>
+				</ol>
+				<a href="#deployment-instructions" id="deployment-instructions" style="color: inherit; text-decoration: none;">
+					<h2>Deployment instructions</h2>
+				</a>
+				<a href="#normal-installation" id="normal-installation" style="color: inherit; text-decoration: none;">
+					<h3>Normal Installation</h3>
+				</a>
+				<ol>
+					<li>Install node.js and git</li>
+					<li>Add them to path if not already in path.</li>
+					<li>Install typescript globally with <code>npm install typescript -g</code></li>
+					<li>Run npm install to get all the dependencies installed</li>
+					<li>cd to the project directory and run tsc to build using typescript</li>
+					<li>Run <code>npm run-script start-dev</code></li>
+				</ol>
+				<a href="#cloning-amp-running-with-docker" id="cloning-amp-running-with-docker" style="color: inherit; text-decoration: none;">
+					<h3>Cloning &amp; Running with Docker</h3>
+				</a>
+				<ol>
+					<li>Install <a href="https://www.docker.com/">Docker</a> and <a href="https://docs.docker.com/compose/">Docker Compose</a></li>
+					<li>Clone/Download the repository and CD to it</li>
+					<li>Run <code>docker-compose up</code> to get the containers installed and started.</li>
+				</ol>
+				<a href="#pulling-amp-running-from-docker-hub" id="pulling-amp-running-from-docker-hub" style="color: inherit; text-decoration: none;">
+					<h3>Pulling &amp; Running from Docker Hub</h3>
+				</a>
+				<ol>
+					<li><p>Pull the container from DockerHub with the command <code>docker pull tvvignesh/node-microservice-boilerplate</code> (Add version if you want)</p>
+					</li>
+					<li><p>Then, start the container using the command:
+						<code>docker run -d -p 8085:8085 -p 9229:9229 -e NODEJS_PORT=8085 -e NODE_ENV=development -e NODEJS_IP=0.0.0.0 tvvignesh/node-microservice-boilerplate</code></p>
+					</li>
+				</ol>
+				<a href="#running-via-pm2" id="running-via-pm2" style="color: inherit; text-decoration: none;">
+					<h3>Running via PM2</h3>
+				</a>
+				<ol>
+					<li>Install node.js and <a href="https://github.com/Unitech/pm2">pm2</a></li>
+					<li>CD to the pm2 directory</li>
+					<li>Run <code>pm2 start pm2-dev.json</code> to start the development cluster</li>
+				</ol>
+				<a href="#running-with-kubernetes" id="running-with-kubernetes" style="color: inherit; text-decoration: none;">
+					<h3>Running with Kubernetes</h3>
+				</a>
+				<p>The project comes with some default kubernetes deployment and service yaml configurations. To use it, do <code>kubectl apply -f kubernetes/deployment.yaml</code> and <code>kubectl apply -f kubernetes/service.yaml</code> once Kubernetes and Kubectl are installed onto your system and configured.</p>
+				<a href="#building-the-code" id="building-the-code" style="color: inherit; text-decoration: none;">
+					<h2>Building the code</h2>
+				</a>
+				<ol>
+					<li>Run <code>npm run build</code> to build the typescript code, copy relevant files</li>
+				</ol>
+				<a href="#logging-middleware" id="logging-middleware" style="color: inherit; text-decoration: none;">
+					<h2>Logging Middleware</h2>
+				</a>
+				<p>Logs can be added by using the log function from error.utils by specifying the log level, payload, SPAN if using Jaeger and a tag object with key-value pairs.</p>
+				<pre><code><span class="hljs-selector-tag">log</span>(<span class="hljs-string">'info'</span>, {
+  <span class="hljs-attribute">message</span>: <span class="hljs-string">'Log message here'</span>,
+  <span class="hljs-attribute">key1</span>: value1,
+  <span class="hljs-attribute">key2</span>: value2
+});</code></pre><p>Use the toggles provided in config to decide where you want to write logs. By default, console logging is enabled and file logging is disabled but this can be changed by using the config.</p>
+				<a href="#static-files" id="static-files" style="color: inherit; text-decoration: none;">
+					<h2>Static Files</h2>
+				</a>
+				<p>You can place all your static files in the <code>public</code> directory and that will get served by the server directly</p>
+				<a href="#exposing-metrics" id="exposing-metrics" style="color: inherit; text-decoration: none;">
+					<h2>Exposing Metrics</h2>
+				</a>
+				<p>The project is bundled with <a href="https://github.com/siimon/prom-client">prom-client</a> to enable exporting the metrics to prometheus with ease. You can access the default metrics at &quot;/metrics&quot; endpoint. You can modify what you export in <code>src/app/controllers/metrics.server.controllers.ts</code></p>
+				<a href="#formatting" id="formatting" style="color: inherit; text-decoration: none;">
+					<h2>Formatting</h2>
+				</a>
+				<p>The project comes with prettier configs and extensions built in.</p>
+				<p>You can format the project manually by running the command <code>npm run format</code> and prettier will format the project for you.</p>
+				<p>You may want to install an extension for your IDE though. More details on the same is available at <a href="https://prettier.io">https://prettier.io</a></p>
+				<a href="#linting" id="linting" style="color: inherit; text-decoration: none;">
+					<h2>Linting</h2>
+				</a>
+				<p>You can customize rules if needed using the .eslintrc file placed in the root directory. If you are using VSCode, you can have the ESLint extension installed. While linting is run everytime you build/start the server, you can manually run it by <code>npm run lint</code></p>
+				<a href="#generate-api-documentation-openapiswagger" id="generate-api-documentation-openapiswagger" style="color: inherit; text-decoration: none;">
+					<h2>Generate API Documentation (OpenAPI/Swagger)</h2>
+				</a>
+				<p>You can generate documentation site by providing details regarding all the endpoints in the <code>apidoc.yaml</code> file in the root and once done, you can start the server and your documentation will get exposed in <code>/api-docs</code> URL. You can use tools like <a href="https://mermade.github.io/openapi-gui/">OpenAPI GUI</a> to help generate the YAML file for you.</p>
+				<a href="#generate-code-documentation" id="generate-code-documentation" style="color: inherit; text-decoration: none;">
+					<h2>Generate Code Documentation</h2>
+				</a>
+				<p>You can generate documentation based on your code by running <code>npm run document</code>. Once generated, you can find the documentation in the docs folder. See <a href="http://typedoc.org/guides/doccomments/">this</a> to know how to document your code to be rendered by the doc generator.</p>
+				<a href="#jwt-authentication" id="jwt-authentication" style="color: inherit; text-decoration: none;">
+					<h2>JWT Authentication</h2>
+				</a>
+				<p>Helpers Utilities for doing JWT authentication is added to <code>src/app/utils/auth.utils.ts</code> and controllers for the same in <code>src/app/controllers/auth.server.controller.ts</code>. The private and public keys are placed in the <code>creds</code> folder. You can generate your own by using tools like <a href="http://travistidwell.com/jsencrypt/demo/">this</a>.</p>
+				<p>No database implementation has been made so far and hence you may need to add your own tables/collections, create users, store secret keys, etc. which is more of an implementation detail.</p>
+				<a href="#editorconfig" id="editorconfig" style="color: inherit; text-decoration: none;">
+					<h2>Editorconfig</h2>
+				</a>
+				<p>A .editorconfig file has been added to the project to enable consistency in development across different IDEs used by different developers. Visit <a href="http://editorconfig.org">http://editorconfig.org</a> for more information. You might have to install plugins in your editor to get this to work.</p>
+				<a href="#running-tests" id="running-tests" style="color: inherit; text-decoration: none;">
+					<h2>Running Tests</h2>
+				</a>
+				<p>You can run your tests by using <code>npm run test</code> command. The project is bundled with <a href="https://github.com/avajs/ava">AVA</a> as the test framework.</p>
+				<a href="#environmental-variables" id="environmental-variables" style="color: inherit; text-decoration: none;">
+					<h2>Environmental Variables</h2>
+				</a>
+				<p>You can set up the environmental variables in the .env file and that will get used in files like docker-compose, Dockerfile, etc. In addition to this, you can set up the rest of the environmental configurations in <code>config/env/yourenv.ts</code> where yourenv can be anything and the respective configs will get loaded depending on env you set.</p>
+				<a href="#compatibility" id="compatibility" style="color: inherit; text-decoration: none;">
+					<h2>Compatibility</h2>
+				</a>
+				<p>Since this project uses all the latest features of the node ecosystem, it requires Node &gt;= v10.0.0</p>
+				<a href="#contributors" id="contributors" style="color: inherit; text-decoration: none;">
+					<h2>Contributors</h2>
+				</a>
+				<ol>
+					<li><a href="https://github.com/tvvignesh">Vignesh T.V.</a> - <a href="https://www.tvvignesh.com">https://www.tvvignesh.com</a></li>
+				</ol>
+				<a href="#contributing-guide" id="contributing-guide" style="color: inherit; text-decoration: none;">
+					<h2>Contributing Guide</h2>
+				</a>
+				<ol>
+					<li>Find any bugs? Please raise it as an issue.</li>
+					<li>Have something to contribute? Please raise a pull request.</li>
+					<li>Looking for enhancements? Please check the milestones, and if you don&#39;t find it, raise an issue.</li>
+				</ol>
+				<a href="#using-this-project" id="using-this-project" style="color: inherit; text-decoration: none;">
+					<h2>Using this Project?</h2>
+				</a>
+				<p>Incase you are using this project, please let me know by dropping me a mail to <a href="mailto:vigneshviswam@gmail.com">vigneshviswam@gmail.com</a> or raising an issue, I will add you to the list of users.</p>
+				<a href="#donations" id="donations" style="color: inherit; text-decoration: none;">
+					<h2>Donations?</h2>
+				</a>
+				<p>Since I am doing this project purely out of interest, I am not looking for donations. But, if you want to do something, donate for charity on behalf of this project and I will add you to the contributors list.</p>
+				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+					<h3>License</h3>
+				</a>
+				<p>MIT</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_controllers_api_server_controller_.html">"app/controllers/api.server.controller"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_controllers_auth_server_controller_.html">"app/controllers/auth.server.controller"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_controllers_metrics_server_controller_.html">"app/controllers/metrics.server.controller"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_db_schema_dbschema_.html">"app/db/schema/dbschema"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_routes_api_server_routes_.html">"app/routes/api.server.routes"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_routes_root_server_routes_.html">"app/routes/root.server.routes"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_utils_api_utils_.html">"app/utils/api.utils"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_utils_auth_utils_.html">"app/utils/auth.utils"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_utils_error_utils_.html">"app/utils/error.utils"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_utils_main_utils_.html">"app/utils/main.utils"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_app_utils_tracing_utils_.html">"app/utils/tracing.utils"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_config_config_.html">"config/config"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_config_env_all_.html">"config/env/all"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_config_env_alpha_.html">"config/env/alpha"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_config_env_development_.html">"config/env/development"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_config_env_production_.html">"config/env/production"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_config_env_secure_.html">"config/env/secure"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_config_express_.html">"config/express"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_config_init_.html">"config/init"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_schema_schema_.html">"schema/schema"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_server_.html">"server"</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer>
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

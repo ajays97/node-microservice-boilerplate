@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-microservice-boilerplate
+spec:
+  selector:
+    app: node-microservice-boilerplate
+  type: LoadBalancer
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8085
+      targetPort: 8085

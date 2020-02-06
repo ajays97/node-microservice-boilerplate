@@ -1,7 +1,7 @@
 {
     "apps": [
         {
-            "name": "node-skeleton",
+            "name": "node-microservice-boilerplate",
             "script": "./dist/server.js",
             "exec_mode": "cluster",
             "instances": 0,

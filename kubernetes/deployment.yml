@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: node-microservice-boilerplate
+  labels:
+    app: node-microservice-boilerplate
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: node-microservice-boilerplate  
+    spec:
+      containers: 
+      - name: node-microservice-boilerplate 
+        image: tvvignesh/node-microservice-boilerplate
+        ports:
+        - containerPort: 8085
