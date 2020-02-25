@@ -13,6 +13,6 @@ spec:
     spec:
       containers: 
       - name: node-microservice-boilerplate 
-        image: tvvignesh/node-microservice-boilerplate
+        image: ajays97/node-microservice-boilerplate
         ports:
         - containerPort: 8085
