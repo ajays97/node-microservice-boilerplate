@@ -21,7 +21,7 @@
         "start-alpha": "npm run build && npm run lint && npx cross-env NODE_ENV=alpha node ./dist/server.js",
         "start-secure": "npm run build && npm run lint && npx cross-env NODE_ENV=secure node ./dist/server.js"
     },
-    "author": "Vignesh T.V.",
+    "author": "Ajay Srinivas",
     "license": "MIT",
     "dependencies": {
         "axios": "^0.19.0",
